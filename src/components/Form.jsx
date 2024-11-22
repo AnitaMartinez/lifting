@@ -1,18 +1,23 @@
 
-function Form() {
+function Form({onChangeName}) {
+    const handleName = (ev) => {
+        //console.log("La usuaria ha escrito en el input", ev.target.value);
+        onChangeName(ev.target.value);
+
+    }
     return (
-        <div>
+        <form>
             <h2>Form</h2>
             <label>
-                Input 1:
-                <input type="text" />
+                Nombre:
+                <input type="text" onChange={handleName} />
             </label>
             <br />
             <label>
-                Input 2:
+                Apellido:
                 <input type="text" />
             </label>
-        </div>
+        </form>
     )
 }
 

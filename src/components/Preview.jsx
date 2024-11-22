@@ -1,9 +1,8 @@
-
-function Preview() {
+function Preview({nameUser}) {
     return (
         <div>
             <h2>Preview</h2>
-            <p>Nombre: </p>
+            <p>Nombre:{nameUser} </p>
             <p>Apellido: </p>
         </div>
     )
